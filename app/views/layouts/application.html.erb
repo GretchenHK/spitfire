@@ -28,8 +28,20 @@
 	</header>
 	<hr />
 	<br class="clear" />
+<div class="container">
+	<%= yield %>
+</div>
+<div class="footer">
+	<div class="container">
+		<div class="col-xs-6">
+			<%= link_to "This isn't enough, I need more", :class => "next-quote" %>
+		</div>
+		<div class="col-xs-6">
+			Built by Gretchen
+		</div>
+	</div>
+</div>	
 
-<%= yield %>
 
 </body>
 </html>
