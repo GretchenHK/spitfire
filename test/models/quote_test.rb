@@ -3,8 +3,8 @@ require 'test_helper'
 class QuoteTest < ActiveSupport::TestCase
   
 	test "unique_tag" do 
-  		quote = Quote.create(:author => 'Joe Schmoe', :saying => 'This is a test.')
-		expected = 'JS#' + quote.id.to_s
+  		quote = FactoryGirl.create(:quote, :author => 'Ken Mazaika')
+		expected = 'KM#' + quote.id.to_s
 		actual = quote.unique_tag
 		assert_equal expected, actual
 	end
